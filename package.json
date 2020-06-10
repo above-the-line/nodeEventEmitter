@@ -1,0 +1,23 @@
+{
+  "name": "nodeeventemitter",
+  "version": "1.0.0",
+  "description": "sends a random message to AzureEventHub",
+  "main": "./src/send.js",
+  "scripts": {
+    "test": "node ./src/send.js --experimental-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/above-the-line/nodeEventEmitter.git"
+  },
+  "author": "Avi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/above-the-line/nodeEventEmitter/issues"
+  },
+  "homepage": "https://github.com/above-the-line/nodeEventEmitter#readme",
+  "dependencies": {
+    "@azure/event-hubs": "^5.2.1",
+    "moment": "^2.26.0"
+  }
+}
