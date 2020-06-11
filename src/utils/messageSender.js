@@ -24,11 +24,12 @@ async function send(message) {
         // Close the producer client.
         await producer.close();
 
-        console.log("A batch of three events have been sent to the event hub");
+        console.log("A batch with the below message has been sent to the event hub:");
+        console.log(message);
     }
     catch(err) {
         console.log("Error occurred: ", err);
     };
 }
 
-exports.send()
+exports.send = send()

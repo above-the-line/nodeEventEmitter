@@ -2,9 +2,9 @@
   "name": "nodeeventemitter",
   "version": "1.0.0",
   "description": "sends a random message to AzureEventHub",
-  "main": "./src/send.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "node ./src/send.js --experimental-modules"
+    "test": "node ./src/app.js --experimental-modules"
   },
   "repository": {
     "type": "git",
