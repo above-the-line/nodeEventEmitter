@@ -3,8 +3,8 @@ exports.initialState = {
     "date-time-UTC": 0,
     "kWh-exported": 0,
     "kWh-imported": 0,
-    "actual-net-effect": 0,
-    "optimal-net-effect": 0,
+    "kWh-net-export": 0,
+    "kWh-net-import": 0,
 }
 
 
