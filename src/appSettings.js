@@ -9,5 +9,5 @@ exports.initialState = {
 
 
 exports.APP_VARS = {
-    MESSAGE_INTERVAL_RATE_IN_MILLISECONDS: 1000    * 3 //*60*30 
+    MESSAGE_INTERVAL_RATE_IN_MILLISECONDS: 1000*60*30    //Send message every 30 minutes
 }

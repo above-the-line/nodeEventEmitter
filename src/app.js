@@ -1,5 +1,5 @@
-// Send a JSON message to an Azure IOT Hub instance every n minutes
-// to simulate field data
+// Send a JSON message to an Azure IOT Hub instance every 30 minutes
+// to simulate field data.
 
 const messageController = require('./utils/messageController')
 const ENV_VARS = require('./appSettings')

@@ -4,7 +4,7 @@
   "description": "sends a random message to AzureEventHub",
   "main": "./src/app.js",
   "scripts": {
-    "test": "node ./src/app.js --experimental-modules"
+    "start": "node ./src/app.js --experimental-modules"
   },
   "repository": {
     "type": "git",

@@ -2,10 +2,6 @@
 // 
 // Public Methods:
 // 1. messengerService - called by the mainLoop in App,js
-// 
-// 
-
-
 
 const messageDispatcher = require('./messageDispatcher')
 const messageBuilder = require('./messageBuilder')
@@ -27,8 +23,9 @@ let previousState = ENV_VARS.initialState
 // 
 // 
 // @SideEffect {modifies object} - modifies private variable previousState
+//                                 so as to store the last sent message 
 exports.messengerService = () => {
     let newMessage = messageBuilder.buildNewMessage(previousState)
     previousState = newMessage
-    // messageDispatcher.send(newMessage)
+    messageDispatcher.send(newMessage)
 }
