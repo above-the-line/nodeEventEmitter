@@ -1,10 +1,10 @@
 
-const ENV_VARS = require('../secrets-env-vars.js')
+const SECRETS = require('../secrets.js')
 const { EventHubProducerClient } = require("@azure/event-hubs");
 
 
-const connectionString = ENV_VARS.SECRETS.AZURE_EVENT_HUBS_NAMESPACE_CONNECTION_STRING;
-const eventHubName = ENV_VARS.SECRETS.AZURE_EVENT_HUB_NAME;
+const connectionString = SECRETS.AZURE_EVENT_HUBS_NAMESPACE_CONNECTION_STRING;
+const eventHubName = SECRETS.AZURE_EVENT_HUB_NAME;
 
 
 exports.send = async (message) => {

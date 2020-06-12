@@ -1,32 +1,30 @@
-// Send to the cloud every n minutes the following JSON message
-
-// {
-//     deviceID: ,
-//     time-UTC: ,
-//     kWh-exported: ,
-//     kWh-imported: ,
-//     actual-state: ,
-//     optimal-state: ,
-// }
+// TIGHTLY COUPLED TO THE MESSAGE FORMAT DEFINED
+// IN APPSETTINGS
 
 
 const moment = require('moment')
+const ENV_VARS = require('./../secrets')
 
-const message = () => {
-    let nowAsNumber = moment.utc().seconds()
-    let timeUTC = moment.utc().format()
-    let message = {
-        "deviceGUID": "F9168C5E-AVI_RASP_PI",
-        "time-UTC": nowAsNumber,
-        "kWh-exported": "",
-        "kWh-imported": "",
+exports.message = (previousMessage) => {
+    let dateTimeUTC = moment.utc().format()
+    let randomNumber1to100 = Math.floor((Math.random()*100)+ 1)
+    
+    console.log(previousMessage["kWh-exported"])
+    // console.log(previousMessage.kWh-exported)
+
+
+    let newMessage = {
+        "deviceGUID": ENV_VARS.SECRETS.DEVICE_GUID,
+        "date-time-UTC": dateTimeUTC,
+        "kWh-exported": previousMessage["kWh-exported"] + randomNumber1to100,
+        "kWh-imported": previousMessage["kWh-imported"] + randomNumber1to100,
         "actual-state": "",
         "optimal-state": "",
     }
-    console.log(nowAsNumber)
-    console.log(timeUTC)
-    // return message
+    // console.log(secondsUTC)
+    // console.log(dateTimeUTC)
+    // console.log(randomNumber1to100)
+    console.log(newMessage)
+    
+    return newMessage
 }
-
-
-exports.message = message()
