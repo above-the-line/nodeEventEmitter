@@ -48,15 +48,24 @@ function randomMessageGenerator(now){
 
 
 const ENV_VARS = require('./secrets-env-vars')
-const messageSender = require('./utils/messageSender')
-
+const messageDispatcher = require('./utils/messageDispatcher')
+const messageBuilder = require('./utils/messageBuilder')
 
 function mainLoop () {
+  
     let interval = ENV_VARS.APP_VARS.MESSAGE_INTERVAL_RATE_IN_MILLISECONDS
 
-    setInterval(
-        function MessageDispatcher(){messageSender.send()}, interval
-    )
+    let message = messageBuilder.message
+
+    let messagePackager = (messageForDispatch) => {
+        messageDispatcher.send(messageForDispatch)
+    }
+
+    // Message Send Loop
+    // setInterval(messagePackager,interval, message)
+
+    console.log(messagePackager(message))
+
 }
 
 
