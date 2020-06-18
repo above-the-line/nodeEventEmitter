@@ -7,6 +7,12 @@ const ENV_VARS = require('./appSettings')
 
 let interval = ENV_VARS.APP_VARS.MESSAGE_INTERVAL_RATE_IN_MILLISECONDS
 
+console.log("Starting application")
+console.log("A random message that conforms to the following structure ")
+console.log(ENV_VARS.initialState)
+console.log("Will be sent every " + ENV_VARS.APP_VARS.MESSAGE_INTERVAL_RATE_IN_MILLISECONDS + " miliseconds")
+
+
 
 function mainLoop () {
     // For every n time period, call the message controller.

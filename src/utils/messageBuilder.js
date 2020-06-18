@@ -40,7 +40,11 @@ exports.buildNewMessage = (previousMessage) => {
         "kWh-net-import": newNetImport,
     }
 
-    console.log(newMessage)
+    /* "series": [
+        {"kWh-exported": newKWhExported},
+        {"kWh-imported": newKWhImported}
+    ]
+    */
 
     return newMessage
 }
