@@ -1,6 +1,8 @@
 # nodeEventEmitter
 
-This AzureIOT messenger app uses Node v12 and is for ARM architecture using Raspian Buster
+This AzureIOT messenger app uses Node v12 and is intended for 
+
+ARM32v6 architecture using Raspian Stretch
 
 To deploy to the device have Docker or IOT Hub installed
 
