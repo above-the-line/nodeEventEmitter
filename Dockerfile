@@ -1,8 +1,12 @@
-# make sure the base Node/OS image matches the target runtime
-# Below example uses "Raspbian GNU/Linux 10 (buster)" 
+# Make sure the base Node/OS image matches the target runtime
+# and the chipset of the compilation target
+# Below example uses node 12 on Raspberry Pi 3B+
+# If for example you wanted to compile for Raspberry Pi (2011)
+# then you would change the first line to FROM arm32v6/node:10-alpine
+# Make sure you compile (docker build) on your desired IOT device (i.e. A Pi3B+)
 
 # Use the official image as a parent image.
-FROM node:10-buster-slim
+FROM arm32v7/node:12-stretch-slim
 
 # Set the working directory in the container image. Specifying that all subsequent commands should be executed there.
 WORKDIR /usr/src/app
