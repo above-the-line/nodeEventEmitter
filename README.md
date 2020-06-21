@@ -8,6 +8,9 @@ To deploy to the device have Docker or IOT Hub installed
 
 Deploy with Dockermachine (now ssh), Docker Hub or Azure IOTHub
 
+#### STEP 0 FOR ALL DEPLOYMENT PIPELINES
+0. Create a secrets.js file in the /src folder so that the node program runs
+
 
 #### STEPS FOR REMOTE DEPLOYMENT WITH DOCKER HUB
 1. Login to Docker Hub and create a repo
