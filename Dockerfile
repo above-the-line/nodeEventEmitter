@@ -5,6 +5,9 @@
 # then you would change the first line to FROM arm32v6/node:10-alpine
 # Make sure you compile (docker build) on your desired IOT device (i.e. A Pi3B+)
 
+# This might fail silently if you forgot to include a secrets.js file
+# in the /src folder
+
 # Use the official image as a parent image.
 FROM arm32v7/node:12-stretch-slim
 
